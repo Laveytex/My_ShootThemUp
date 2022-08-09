@@ -12,7 +12,7 @@ public class My_ShootThemUp : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 		
-		PublicIncludePaths.AddRange(new string[]{"My_ShootThemUp/Public/Player"});
+		PublicIncludePaths.AddRange(new string[]{"My_ShootThemUp/Public/Player","My_ShootThemUp/Public/Components"});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

@@ -18,7 +18,7 @@ class MY_SHOOTTHEMUP_API ASTBBaseCharacter : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	ASTBBaseCharacter();
+	ASTBBaseCharacter(const FObjectInitializer&ObjInit);
 
 protected:
 	// Called when the game starts or when spawned
@@ -35,10 +35,17 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+    UFUNCTION(BlueprintCallable, Category="Movement")
+    bool IsRunning() const;
 protected:
+    bool WantsToRun = false;
+    bool IsMovingForward = false;
     void MoveForward(float Amount);
     void MoveRight(float Amount);
+    
+    void OnStartRunning();
+    void OnStopRunning();
 
-    /*void LookUp(float Amount);
-    void TurnAround(float Amount);*/
+
 };
