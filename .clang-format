@@ -1,0 +1,38 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+IndentWidth: '16'
+AlignOperands: true
+AllowShortIfStatementsOnASingleLine: false
+BraceWrapping: 
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BreakBeforeBraces: Custom
+IncludeCategories: 
+  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority: 2
+    SortPriority: 0
+  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
+    Priority: 3
+    SortPriority: 0
+  - Regex: '.*'
+    Priority: 1
+    SortPriority: 0
+IncludeIsMainRegex: '(Test)?$'
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+...
