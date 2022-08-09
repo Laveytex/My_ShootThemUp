@@ -1,7 +1,7 @@
 ---
 Language: Cpp
 BasedOnStyle: Google
-IndentWidth: '16'
+IndentWidth: '4'
 AlignOperands: true
 AllowShortIfStatementsOnASingleLine: false
 BraceWrapping: 
